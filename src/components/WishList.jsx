@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 
+
 function WishList() {
     const [query, setQuery] = React.useState("")
     const[items,setItems]=React.useState([])
@@ -27,9 +28,9 @@ function WishList() {
               onChange={(e) => setQuery(e.target.value)}
               value={query}
           placeholder="Add Something"/>}
-         {items.length<3 && <Button title="Add" onClick={handleAdd} />}
+         {items.length<3 && <Button  title="Add" onClick={handleAdd} />}
           <br/>
-          <hr />
+         
           <ol>
               {
                   items?.map((item) => <li key={item.id}><em>{item.title}</em></li>)    
